@@ -49,7 +49,7 @@ There's a bunch of Software that you need on your machine. We aren't providing i
 
 To accompany the material in this book, we have created a special GitHub repository full of tasks to complete.
 
-Begin by forking the `tasks` repository to your GitHub account: [tasks repo (refreshed 2024))](https://github.com/COS420-Fall24/tasks/fork)
+Begin by forking the `tasks` repository to your GitHub account: [tasks repo (Action version problem fixed? 2025))](https://github.com/COS420-Fall24/tasks/fork)
 
 ## Enable Workflow Actions
 
