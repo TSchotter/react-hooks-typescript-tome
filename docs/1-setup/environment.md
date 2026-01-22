@@ -100,14 +100,14 @@ The site should now be able to deploy whenever you push a change to the `main` b
 Once the repository is forked and deployed, click the green button that says "<> Code", copy the URL, and use the command below to clone the repo and move into the cloned directory. Type/copy and paste the commands into a terminal (without the $> part, that represents the terminal's prompt). Do not use an SSH link, it needs to say https:// in the front of it.
 
 ```sh
-$> git clone https://WHATEVER-URL-YOU-GET
-$> cd tasks
+git clone https://WHATEVER-URL-YOU-GET
+cd tasks
 ```
 
 You'll need to add our original repository as an upstream remote, allowing you to pull in changes that we make along the way:
 
 ```sh
-$> git remote add upstream https://github.com/COS420-Fall24/tasks.git
+git remote add upstream https://github.com/COS420-Fall24/tasks.git
 ```
 
 # Install Dependencies and Run
@@ -115,7 +115,7 @@ $> git remote add upstream https://github.com/COS420-Fall24/tasks.git
 Now you need to install all the dependencies for the project, which will take a while:
 
 ```sh
-$> npm install
+npm install
 ```
 
 (Note that sometimes, you might have to restart your machine if you see a "commond not recognized" error). Ignore warnings about vulnerabilities. They aren't as bad as they sound. If you were making a production application, you could deal with them, but this is just a first learning experience. But keep it in the back of your mind that security does matter and you have to learn that stuff eventually!
@@ -123,7 +123,7 @@ $> npm install
 At this point, in theory, you should be able to run the starter application.
 
 ```sh
-$> npm run start
+npm run start
 ```
 
 After a minute or two, a web browser window will pop up, showing off the working website.
@@ -143,7 +143,7 @@ Once you have visually confirmed the text is there, you can use `CTRL+C` to canc
 The next command to run is the tests, which will give another perspective on whether you are meeting our requirements:
 
 ```sh
-$> npm run test:cov
+npm run test:cov
 ```
 
 So far, we only have one test, which checks to make sure that the text `COS420` is in your website's content somewhere. If you ever decide to remove that text, remember to update that test case to check something similar.
@@ -157,7 +157,7 @@ GitHub is a platform that lets us store copies of our code as it changes over ti
 Before you can make a commit, you must *stage* file any files that you want to include in the commit as being changed. You can quickly list files via the third menu on the left of Visual Studio Code, or using this terminal command:
 
 ```sh
-$> git status
+git status
 ```
 
 The only file we should have edited by now is `App.tsx`, so that will be listed. We need to *add* this file to the *stage* list, write a *commit* message, and then *push* the change. You can do this through the VS Code interface, or through the command line:
@@ -165,9 +165,9 @@ The only file we should have edited by now is `App.tsx`, so that will be listed.
 (Note: you may see another file `package-lock.json` as changed. If so, you should also *add* that file. Not that you need to know this starting out, but if you are curious, it holds more detailed information about the exact versions of packages that you installed with `npm install`.)
 
 ```sh
-$> git add src/App.tsx
-$> git commit -m "Added name to App"
-$> git push
+git add src/App.tsx
+git commit -m "Added name to App"
+git push
 ```
 
 The `git commit -m "the message"` stands for `git commit --message="the message"`.

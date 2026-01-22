@@ -56,10 +56,10 @@ These three repositories can have a different set of branches and commits, but a
 Every time we start a new task, we will have you run the same general set of commands. Here are the commands we want you to run right now:
 
 ```sh
-$> git pull upstream main
-$> git fetch upstream task-first-branch
-$> git checkout -b solved-first-branch
-$> git merge upstream/task-first-branch
+git pull upstream main
+git fetch upstream task-first-branch
+git checkout -b solved-first-branch
+git merge upstream/task-first-branch
 ```
 
 First, we are `pull`ing the latest versions of the `main` tasks branch from our upstream. If we have pushed any bug fixes to the main repository files, this will retrieve them.
@@ -81,7 +81,7 @@ When we ran `git merge upstream/task-first-branch`, a new file appeared named `s
 You might want to see the test is failing by first running the command line tests. In Visual Studio Code, bring up a new terminal and enter:
 
 ```sh
-$> npm run test:cov
+npm run test:cov
 ```
 
 You can quit by pressing the `q` on your keyboard.
@@ -89,7 +89,7 @@ You can quit by pressing the `q` on your keyboard.
 Then, run the site:
 
 ```sh
-$> npm run start
+npm run start
 ```
 
 You are now ready to add the text `"Hello World"` somewhere. Up to you to decide, but we would probably suggest the body. That is the part of the page in App.tsx where the "Edit src/App.tsx and save. This page..." is. This is the same file you edited and added your name in before. Make sure you don't replace the text `"COS420"` because the original tests will still look for those!
@@ -97,7 +97,7 @@ You are now ready to add the text `"Hello World"` somewhere. Up to you to decide
 Once you have visually confirmed the text is there, you can use `CTRL+C` to cancel the `npm run start` command running in the terminal. Then, run the tests again:
 
 ```sh
-$> npm run test:cov
+npm run test:cov
 ```
 
 If all tests pass, then you should be ready to make a Pull Request and deploy your change to the `main` branch.
@@ -111,7 +111,7 @@ Many folks feel that the best way to merge changes from a branch back into the `
 The first time you push your changes for this branch, you will need to run the following command after you have added and committed your files:
 
 ```sh
-$> git push --set-upstream origin solved-first-branch
+git push --set-upstream origin solved-first-branch
 ```
 
 This makes the local branch `solved-first-branch` available on the remote, and then pushes the branches' commits. Read the output of your push command which will tell you how to make a pull request. You can now return to the repository on GitHub, where you will be presented with an orange box offering to make a Pull Request. This will let you merge the new branch into your `main` branch (thereby deploying your latest changes to the site). Click the button to get started.
